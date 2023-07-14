@@ -1,8 +1,10 @@
 # Noise-aware Speech Enhancement using Diffusion Probabilistic Model
 
-This repository contains the official PyTorch implementations for paper:
+This repository contains the official PyTorch implementations for our paper:
 
-- Yuchen Hu, Chen Chen, Ruizhe Li, Qiushi Zhu, Eng Siong Chng. [*"Speech Enhancement and Dereverberation with Diffusion-Based Generative Models"*]().
+- Yuchen Hu, Chen Chen, Ruizhe Li, Qiushi Zhu, Eng Siong Chng. [*"Noise-aware Speech Enhancement using Diffusion Probabilistic Model"*]().
+
+Our approach and code are based on prior work [SGMSE+](https://github.com/sp-uhh/sgmse).
 
 
 ## Installation
@@ -36,7 +38,7 @@ python train.py --base_dir <your_base_dir> --inject_type <inject_type> --pretrai
 
 where `your_base_dir` should be a path to a folder containing subdirectories `train/` and `valid/` (optionally `test/` as well). Each subdirectory must itself have two subdirectories `clean/` and `noisy/`, with the same filenames present in both. We currently only support training with `.wav` files.
 `inject_type` should be chosen from ["addition", "concat", "cross-attention"].
-`pretrained_beats` should be the path to pre-trained [BEATs](https://valle.blob.core.windows.net/share/BEATs/BEATs_iter3_plus_AS2M.pt?sv=2020-08-04&st=2023-03-01T07%3A51%3A05Z&se=2033-03-02T07%3A51%3A00Z&sr=c&sp=rl&sig=QJXmSJG9DbMKf48UDIU1MfzIro8HQOf3sqlNXiflY1I%3D), which is already provided as "BEATs_iter3_plus_AS2M.pt".
+`pretrained_beats` should be the path to pre-trained [BEATs](https://valle.blob.core.windows.net/share/BEATs/BEATs_iter3_plus_AS2M.pt?sv=2020-08-04&st=2023-03-01T07%3A51%3A05Z&se=2033-03-02T07%3A51%3A00Z&sr=c&sp=rl&sig=QJXmSJG9DbMKf48UDIU1MfzIro8HQOf3sqlNXiflY1I%3D).
 
 The full command is also included in `train.sh`.
 To see all available training options, run `python train.py --help`.
