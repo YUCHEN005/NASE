@@ -67,7 +67,7 @@ You may refer to our full commands included in `enhancement.sh` and `calc_metric
 
 We kindly hope you can cite our paper in your publication when using our research or code:
 ```bib
-@article{hu2023gradient,
+@article{hu2023noise,
   title={Noise-aware Speech Enhancement using Diffusion Probabilistic Model},
   author={Hu, Yuchen and Chen, Chen and Li, Ruizhe and Zhu, Qiushi and Chng, Eng Siong},
   journal={arXiv preprint arXiv:2307.08029},
