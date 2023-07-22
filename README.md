@@ -4,7 +4,7 @@ This repository contains the official PyTorch implementations for our paper:
 
 - Yuchen Hu, Chen Chen, Ruizhe Li, Qiushi Zhu, Eng Siong Chng. [*"Noise-aware Speech Enhancement using Diffusion Probabilistic Model"*](https://arxiv.org/abs/2307.08029).
 
-Our approach and code are based on prior work [SGMSE+](https://github.com/sp-uhh/sgmse).
+Our code is based on prior work [SGMSE+](https://github.com/sp-uhh/sgmse).
 
 
 ## Installation
