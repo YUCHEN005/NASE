@@ -21,7 +21,8 @@ Our code is based on prior work [SGMSE+](https://github.com/sp-uhh/sgmse).
 
 ## Pretrained checkpoints
 
-- We provide [pretrained checkpoint](https://drive.google.com/file/d/1tLc1HfB3HHwCHyJR8cc-6fMgnHs8Lgws/view?usp=sharing) for the model trained on VoiceBank-DEMAND, as in the paper.
+- We release [pretrained checkpoint](https://drive.google.com/drive/folders/1q25IOSR5Xd-5Kv13PfOhVJvMhgssTJPh?usp=sharing) for the model trained on VoiceBank-DEMAND, as in the paper.
+- We also provide [testing samples](https://drive.google.com/drive/folders/18wCBq2I_W2sTdQL1OkBHU0KnLqLDHFjd?usp=sharing) before and after NASE processing for comparison.
 
 Usage:
 - For resuming training, you can use the `--resume_from_checkpoint` option of `train.py`.
