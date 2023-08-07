@@ -16,6 +16,7 @@ if __name__ == '__main__':
     parser.add_argument("--test_set", type=str, default='noisy')
     parser.add_argument("--enhanced_dir", type=str, required=True, help='Directory containing the enhanced data')
     parser.add_argument("--ckpt", type=str,  help='Path to model checkpoint.')
+    parser.add_argument("--pretrain_class_model", type=str, default="/home3/huyuchen/pytorch_workplace/sgmse/BEATs_iter3_plus_AS2M.pt")
     parser.add_argument("--corrector", type=str, choices=("ald", "langevin", "none"), default="ald", help="Corrector class for the PC sampler.")
     parser.add_argument("--corrector_steps", type=int, default=1, help="Number of corrector steps")
     parser.add_argument("--snr", type=float, default=0.5, help="SNR value for (annealed) Langevin dynmaics.")
@@ -25,6 +26,7 @@ if __name__ == '__main__':
     noisy_dir = join(args.test_dir, args.test_set)
     checkpoint_file = args.ckpt
     corrector_cls = args.corrector
+    pretrain_class_model = args.pretrain_class_model
 
     target_dir = args.enhanced_dir
     ensure_dir(target_dir)
@@ -36,7 +38,13 @@ if __name__ == '__main__':
     corrector_steps = args.corrector_steps
 
     # Load score model 
-    model = ScoreModel.load_from_checkpoint(checkpoint_file, base_dir='', batch_size=16, num_workers=0, kwargs=dict(gpu=False))
+    model = ScoreModel.load_from_checkpoint(
+        checkpoint_file,
+        base_dir='',
+        batch_size=16,
+        num_workers=0,
+        pretrain_class_model=pretrain_class_model,
+        kwargs=dict(gpu=False))
     model.eval(no_ema=False)
     model.cuda()
 

@@ -43,6 +43,9 @@ class ScoreModel(pl.LightningModule):
             loss_type: The type of loss to use (wrt. noise z/std). Options are 'mse' (default), 'mae'
         """
         super().__init__()
+        if pretrain_class_model is None:
+            pretrain_class_model = "/home3/huyuchen/pytorch_workplace/sgmse/BEATs_iter3_plus_AS2M.pt"
+        
         # Initialize Backbone DNN
         dnn_cls = BackboneRegistry.get_by_name(backbone)
         self.dnn = dnn_cls(**kwargs)
