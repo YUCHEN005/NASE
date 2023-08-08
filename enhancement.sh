@@ -8,5 +8,6 @@ python enhancement.py \
       --test_dir data/test \
       --test_set noisy \
       --enhanced_dir enhanced \
-      --ckpt logs/mtl_with_beats/epoch_97_pesq_3.01.ckpt
+      --ckpt logs/mtl_with_beats/epoch_97_pesq_3.01.ckpt \
+      --pretrain_class_model <your_path>/BEATs_iter3_plus_AS2M.pt
 
