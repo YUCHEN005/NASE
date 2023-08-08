@@ -37,7 +37,7 @@ if __name__ == '__main__':
     N = args.N
     corrector_steps = args.corrector_steps
 
-    # Load score model 
+    # Load score model, with your specified beats model path in <pretrain_class_model>
     model = ScoreModel.load_from_checkpoint(
         checkpoint_file,
         base_dir='',
