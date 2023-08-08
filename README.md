@@ -49,7 +49,7 @@ To see all available training options, run `python train.py --help`.
 
 To evaluate on a test set, run
 ```bash
-python enhancement.py --test_dir <your_test_dir> --enhanced_dir <your_enhanced_dir> --ckpt <path_to_model_checkpoint>
+python enhancement.py --test_dir <your_test_dir> --enhanced_dir <your_enhanced_dir> --ckpt <path_to_model_checkpoint> --pretrain_class_model <pretrained_beats>
 ```
 
 to generate the enhanced .wav files, and subsequently run
@@ -60,7 +60,9 @@ python calc_metrics.py --test_dir <your_test_dir> --enhanced_dir <your_enhanced_
 
 to calculate and output the instrumental metrics.
 
-Both scripts should receive the same `--test_dir` and `--enhanced_dir` parameters. The `--cpkt` parameter of `enhancement.py` should be the path to a trained model checkpoint, as stored by the logger in `logs/`.
+Both scripts should receive the same `--test_dir` and `--enhanced_dir` parameters. 
+The `--cpkt` parameter of `enhancement.py` should be the path to a trained model checkpoint, as stored by the logger in `logs/`.
+The `--pretrain_class_model` should be the path to pre-trained [BEATs](https://valle.blob.core.windows.net/share/BEATs/BEATs_iter3_plus_AS2M.pt?sv=2020-08-04&st=2023-03-01T07%3A51%3A05Z&se=2033-03-02T07%3A51%3A00Z&sr=c&sp=rl&sig=QJXmSJG9DbMKf48UDIU1MfzIro8HQOf3sqlNXiflY1I%3D).
 
 You may refer to our full commands included in `enhancement.sh` and `calc_metrics.sh`. 
 
