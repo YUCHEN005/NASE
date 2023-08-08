@@ -10,4 +10,3 @@ python enhancement.py \
       --enhanced_dir enhanced \
       --ckpt logs/mtl_with_beats/epoch_97_pesq_3.01.ckpt \
       --pretrain_class_model <your_path>/BEATs_iter3_plus_AS2M.pt
-
