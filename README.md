@@ -1,5 +1,7 @@
 # Noise-aware Speech Enhancement using Diffusion Probabilistic Model
 
+<p align="center">  <img src="https://github.com/YUCHEN005/NASE/blob/master/nase.png" height ="300"> </p>
+
 This repository contains the official PyTorch implementations for our paper:
 
 - Yuchen Hu, Chen Chen, Ruizhe Li, Qiushi Zhu, Eng Siong Chng. [*"Noise-aware Speech Enhancement using Diffusion Probabilistic Model"*](https://arxiv.org/abs/2307.08029).
